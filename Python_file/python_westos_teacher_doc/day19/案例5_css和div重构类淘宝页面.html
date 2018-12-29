@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝</title>
+
+    <!--margin: 居中-->
+
+
+    <style>
+        #father{
+            width: 1429px;
+            height: 2000px;
+            margin: auto;
+        }
+
+        .top{
+            width: 33.3%;
+            height: 50px;
+            float: left;
+
+        }
+
+        #top-info{
+            padding-top: 12px;
+            height: 38px;
+
+        }
+
+
+        #menu{
+            height: 50px;
+            width: 100%;
+            background-color:Darkorange;
+            float: left;
+        }
+
+        ul li{
+            display: inline;
+            color: white;
+        }
+
+
+        #index{
+            font-size: 18px;
+
+        }
+
+        #product {
+            height:1000px;
+            width: 100%;
+
+        }
+
+
+        #product-top{
+            background-color: Darkorange;
+            height: 38px;
+            text-indent: 1em;
+            padding-top: 12px;
+            width: 100%;
+        }
+
+        #product-bottom{
+            height: 500px;
+            width: 100%;
+        }
+
+        #product-bottom-left{
+            height: 495px;
+            width: 195px;
+            padding-top: 113px;
+            background-color: Darkorange;
+            float: left;
+        }
+
+        #product-bottom-right{
+            height: 608px;
+            width: 1216px;
+            float: left;
+        }
+
+
+        #big{
+            width: 610px;
+            height: 303px;
+            float: left;
+            margin: auto;
+        }
+
+        .small{
+
+            width: 202px;
+            height: 303px;
+            float: left;
+            margin: auto;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+<!--
+    1. 创建一个大的div嵌套8个小的div因为共8行;
+    2. 实现第一行, 嵌套一个表格一行三列的表格, 分别对单元格写入数据;
+    3. 实现第二行导航栏,暂时使用字体标签结合超链接， 需要设置当前单元格颜色和字体颜色；
+    4. 实现第3行(直接放置一张图片);
+    5. 实现第4行热门商品, 嵌套一个单元格(3行7列的表格)
+    6. 5行放置一张广告图片
+    7. 6行复制第四行代码;
+    8. 7行放置一张广告图片
+    9. 8行, 使用字体标签和超链接标签完成友情链接和版权信息;
+-->
+
+
+<div id="father">
+    <!--1. logo部分-->
+    <div id="logo">
+        <div class="top">
+            <img height="50px" src="http://www.westos.org/images/ali.png">
+        </div>
+        <div class="top"></div>
+        <div class="top" id="top-info">
+            <a href="#"> 注册</a>
+            <a href="#"> 登录</a>
+            <a href="#"> 购物车</a>
+
+        </div>
+    </div>
+
+
+    <!--2. 导航栏部分-->
+    <div id="menu">
+        <ul>
+
+            <li id="index">首页</li>&nbsp;&nbsp;&nbsp;
+            <li>手机数码</li>&nbsp;&nbsp;&nbsp;
+            <li>电脑办公</li>&nbsp;&nbsp;&nbsp;
+            <li>家用电器</li>&nbsp;&nbsp;&nbsp;
+            <li>运动户外</li>&nbsp;&nbsp;&nbsp;
+            <li>运动户外</li>&nbsp;&nbsp;&nbsp;
+            <li>童装玩具</li>&nbsp;&nbsp;&nbsp;
+        </ul>
+    </div>
+
+    <!--3. 轮播图部分-->
+    <div>
+        <img src="https://s1.tuchong.com/content-image/201805/bb6532bae9f17785ab3191642bd9b292.jpg" width="100%">
+    </div>
+
+
+    <!--4. 最新商品部分-->
+    <div id="product">
+
+        <!--最新商品显示-->
+        <div id="product-top">
+
+            <b><font size="4" color="white">最新商品</font></b>
+        </div>
+
+
+        <div id="product-bottom">
+
+            <!--最新商品左边导航, 一个广告图片-->
+            <div id="product-bottom-left">
+                <img src="https://img.alicdn.com/tps/i4/TB16GtDsb1YBuNjSszewu1blFXa.png_290x290Q75s0.jpg_.webp"
+                     width="100%">
+
+            </div>
+
+
+            <!--右边导航栏, 10个小商品信息-->
+            <div id="product-bottom-right">
+
+                <div id="big">
+                    <img src="https://img.alicdn.com/simba/img/TB1CP9ltACWBuNjy0FaSutUlXXa.jpg">
+
+
+                </div>
+                <div class="small">
+                    <img src="https://gma.alicdn.com/bao/uploaded/i4/126123842/TB2h1gsquOSBuNjy0FdXXbDnVXa_!!0-saturn_solar.jpg_200x200.jpg_.webp">
+                    <p><font size="2">巴厘岛沙滩裙女夏2017新款显瘦海边度假白色仙女裙泰国普吉岛裙子</font></p>
+                    <font color="red" size="5">¥99.90</font>
+                </div>
+                <div class="small">
+                    <img src="https://gma.alicdn.com/bao/uploaded/i3/1488206070407673970/TB2L6X0uCFjpuFjSszhXXaBuVXa_!!0-saturn_solar.jpg_200x200.jpg_.webp">
+                    <p><font size="2">卧室墙纸3D立体无纺布精压欧式田园温馨浮雕客厅电视背景墙壁纸</font></p>
+                    <font color="red" size="5">¥36.00</font>
+                </div>
+                <div class="small">
+                    <img src="https://img.alicdn.com/bao/uploaded/i2/2461796952/TB1LfRco41YBuNjy1zcXXbNcXXa_!!0-item_pic.jpg_200x200q90.jpg_.webp">
+                    <p><font size="2">格力电风扇台式转页扇家用落地扇台扇学生宿舍定时鸿运扇静音风扇</font></p>
+                    <font color="red" size="5">¥79.00</font>
+
+                </div>
+                <div class="small">
+                    <img src="https://img.alicdn.com/bao/uploaded/i2/829898992/TB29f2OtpXXXXXPXpXXXXXXXXXX_!!829898992.jpg_200x200q90.jpg_.webp">
+                    <p><font size="2">古典树叶流苏步摇簪子金色复古简约盘发头饰新娘古装汉服宫廷发簪</font></p>
+                    <font color="red" size="5">¥57.60</font>
+                </div>
+                <div class="small">
+                    <img src="https://img.alicdn.com/bao/uploaded/i2/336872749/TB2nF4Qi3JlpuFjSspjXXcT.pXa_!!336872749.jpg_200x200q90.jpg_.webp">
+                    <p><font size="2">包邮古装头冠汉服女款束发cos发冠发簪子流苏发夹莲花发饰顶夹 女</font></p>
+                    <font color="red" size="5">¥21.60</font>
+                </div>
+                <div class="small">
+                    <img src="https://gma.alicdn.com/bao/uploaded/i3/1488206070407673970/TB2L6X0uCFjpuFjSszhXXaBuVXa_!!0-saturn_solar.jpg_200x200.jpg_.webp">
+                    <p><font size="2">卧室墙纸3D立体无纺布精压欧式田园温馨浮雕客厅电视背景墙壁纸</font></p>
+                    <font color="red" size="5">¥36.00</font>
+                </div>
+                <div class="small">
+                    <img src="https://img.alicdn.com/bao/uploaded/i2/336872749/TB2nF4Qi3JlpuFjSspjXXcT.pXa_!!336872749.jpg_200x200q90.jpg_.webp">
+                    <p><font size="2">包邮古装头冠汉服女款束发cos发冠发簪子流苏发夹莲花发饰顶夹 女</font></p>
+                    <font color="red" size="5">¥21.60</font>
+                </div>
+                <div class="small">
+                    <img src="https://img.alicdn.com/bao/uploaded/i2/2461796952/TB1LfRco41YBuNjy1zcXXbNcXXa_!!0-item_pic.jpg_200x200q90.jpg_.webp">
+                    <p><font size="2">格力电风扇台式转页扇家用落地扇台扇学生宿舍定时鸿运扇静音风扇</font></p>
+                    <font color="red" size="5">¥79.00</font>
+                </div>
+                <div class="small">
+                    <img src="https://img.alicdn.com/bao/uploaded/i2/336872749/TB2nF4Qi3JlpuFjSspjXXcT.pXa_!!336872749.jpg_200x200q90.jpg_.webp">
+                    <p><font size="2">包邮古装头冠汉服女款束发cos发冠发簪子流苏发夹莲花发饰顶夹 女</font></p>
+                    <font color="red" size="5">¥21.60</font>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!--剩余部分自行完成-->
+
+    <!--5. 广告图片-->
+    <div></div>
+
+    <!--6. 热卖商品-->
+    <div></div>
+
+
+    <!--7. 广告图片-->
+    <div></div>
+
+
+    <!--8. 友情链接和版权信息-->
+    <div></div>
+
+
+</div>
+
+
+</body>
+</html>

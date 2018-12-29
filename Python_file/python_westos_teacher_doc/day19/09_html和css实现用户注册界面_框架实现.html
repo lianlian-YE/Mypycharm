@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!--
+实现目标:
+       - 使用html的表单标签编写注册界面
+       - 使用div和css重写网站首页
+
+
+学习目标:
+        - 熟练使用<form><input>等标签编写注册表单;
+        - 熟悉CSS样式的三种导入方式;
+        - 熟悉CSS选择器的使用
+        - 了解CSS基本属性的使用
+        - 了解CSS盒子模型;
+
+-->
+
+
+<!--网站注册页面显示:
+
+1. 需求分析:
+
+2. 技术分析
+
+    1). form表单
+
+    表单标签: 所有需要提交到服务器端的表单项必须使用form标签括起来；
+    form标签属性:
+        action: 整个表单提交的位置(可以是一个页面， 也可以是一个后台python代码)
+        method:表单的提交方式(get/post/delete....等)
+
+    2). 文本输入项
+    3). 密码输入项
+    4). 其他按钮
+
+
+
+3. 步骤分析
+4. 代码实现
+
+
+-->
+
+<form action="#" method="get">
+
+    用户名:<input type="text"><br/>
+    密码:<input type="password"><br/>
+    确认密码:<input type="password"><br/>
+
+    <!--name属性取值是为了分组-->
+    性别:<input type="radio" name="gender">男
+    <input type="radio" name="gender">女<br/>
+
+
+    爱好:<input type="checkbox" name="hobby">吃饭
+    <input type="checkbox" name="hobby">睡觉
+    <input type="checkbox" name="hobby">写代码<br>
+
+
+    头像:<input type="file" name="logo"><br>
+    籍贯:<select name="'province">
+    <option>---请选择---</option>
+    <option>北京</option>
+    <option>上海</option>
+    <option>西安</option>
+</select><br/>
+
+    <!--几乎不使用,-->
+    自我介绍:
+    <textarea>
+
+    </textarea><br/>
+
+
+    <!--提交按钮-->
+    提交按钮:<input type="submit" value="注册">
+
+
+</form>
+
+
+</body>
+</html>

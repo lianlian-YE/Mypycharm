@@ -1,0 +1,17 @@
+{#<!--<h1>dict value  {{ dict['a'] | upper}}</h1>-->
+<!--<h1>list value {{ list[-1] }}</h1>-->
+<!--<h1>list value with var {{ list[var] }}</h1>-->
+<!--<h1>object's method {{ test.hello() }}</h1>-->
+#}
+{#
+    {% if user %}
+    <h1>hello {{ user }}</h1>
+    {% else %}
+    <h1>hello</h1>
+    {% endif %}
+#}
+<ul>
+    {% for li in list %}
+        <li> {{ li }} </li>
+    {% endfor %}
+</ul>

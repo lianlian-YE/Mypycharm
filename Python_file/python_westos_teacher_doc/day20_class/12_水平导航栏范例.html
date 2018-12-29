@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12_水平导航栏范例</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f3f3f3;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            /*去掉a标签的下划线*/
+            text-decoration: none;
+            /*设置子题颜色*/
+            color: black;
+            /*显示块元素的链接， 让整体作为可点击的区域， 不止是文本*/
+            display: block;
+
+            /*设置内边距*/
+            padding: 10px 30px;
+
+        }
+
+
+
+        /*jquery, bootstrap, vue*/
+
+        /*导航栏*/
+        li a.index {
+            background-color: green;
+            color: white;
+            font-size: 18px;
+        }
+
+        li a:hover {
+            background-color: darkgrey;
+            color: white;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+<ul>
+    <li><a class="index" href="#">首页</a></li>
+    <li><a href="#">新闻</a></li>
+    <li><a href="#">照片</a></li>
+    <li><a href="#">联系</a></li>
+</ul>
+
+</body>
+</html>

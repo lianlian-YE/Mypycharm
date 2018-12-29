@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS浮动</title>
+    <style type="text/css">
+
+
+    <!--浮动的几个实验:
+        1. 第一个框向右浮动;
+        2. 第一个框向左浮动;
+        3. 所有的框向左移动(如果一行可以容纳)；
+        4. 所有的框向左移动(如果一行不能容纳)；
+        5. 清除浮动;
+
+
+
+    -->
+
+        #one{
+            border: 1px solid red;
+            width: 300px;
+            height: 150px;
+            float:left;
+        }
+
+
+        #two{
+            border: 1px solid black;
+            width: 350px;
+            height: 150px;
+
+        }
+
+        #three{
+            border: 1px solid blue;
+            width: 300px;
+            height: 150px;
+
+        }
+
+
+        #clear{
+            clear: both;
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="one">
+
+</div>
+
+
+<div id="clear">
+
+</div>
+
+
+<div id="two">
+
+</div>
+
+
+<div id="three">
+
+
+</div>
+
+</body>
+</html>

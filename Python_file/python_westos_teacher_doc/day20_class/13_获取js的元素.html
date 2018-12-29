@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13_获取js的元素</title>
+    <script type="text/javascript">
+        //
+        <!--js是可以嵌套在html里面的编程语言-->
+        //        var user = document.getElementsByName("user").value;
+        //        alert(user);
+
+        function checkForm() {
+
+//  **********************判断用户名是否为空*************************
+
+            //1. 获取用户输入的用户名
+            var user = document.getElementById("user").value;
+
+            //2. 判断用户名是否为空;
+            //js中， ==判断值是否相等， 会对值进行类型转换;
+            if (user === "") {
+                alert("用户名不能为空");
+                return false;
+            }
+
+
+            // **********************判断密码是否为空*************************
+
+            //1. 获取用户输入的用户名
+            var passwd = document.getElementById("passwd").value;
+
+            //2. 判断用户名是否为空;
+            //js中， ==判断值是否相等， 会对值进行类型转换;
+            if (passwd === "") {
+                alert("密码不能为空");
+                return false;
+            }
+
+
+//*******************判断两个密码是否一致************************
+
+            //        alert("hello pyhton");
+
+
+//***********************判断邮箱是否合法*************************
+//pattern = r'.+@\w+\.com'
+//        1). 获取用户输入的邮箱:// www@qq.com
+            var email = document.getElementById("email").value;
+//        2). 判断email值是否符和规则(正则表达式)
+//          js中如何定义正则?
+            var patt1 = new RegExp(".+@\\w+\\.com");
+//        判断是否符和正则?
+//        patt1.test(email)返回true或者false;
+            if (!patt1.test(email)) {
+
+                alert("邮箱不合法!");
+                return false;
+
+            }
+        }
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+
+<!--
+
+//1. 确定在什么时候操作， 进行检测表单内容是否合法;（当提交表单时， 绑定一个函数checkForm()）
+
+-->
+<form action="#" method="get" onsubmit="return checkForm()">
+
+    用户名: <input type="text" name="user" id="user"><br/>
+    密码:<input type="password" name="passwd" id="passwd"><br/>
+    确认密码:<input type="password" name="repasswd" id="repasswd"><br/>
+    邮箱:<input type="text" name="email" id="email"><br/>
+    <input type="submit" value="登录">
+
+
+</form>
+
+
+</body>
+</html>

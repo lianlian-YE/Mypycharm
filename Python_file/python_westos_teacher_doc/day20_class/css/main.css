@@ -1,0 +1,21 @@
+/*<!--属性选择器-->*/
+input[type="text"] {
+    width: 300px;
+    background-color: #E0E0E0;
+}
+
+input[name="passwd"] {
+    width: 350px;
+    background-color: aliceblue;
+}
+
+input[type="submit"] {
+    background-color: darkseagreen;
+}
+
+div[class="hello"] {
+    /*border: 1px solid red;*/
+    margin: auto;
+    aligin: center;
+
+}

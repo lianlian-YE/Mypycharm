@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11_实现全选和全不选操作</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        function selectAll() {
+            //1.获取编号前面的复选框；
+            var checkAllEle = document.getElementById('selectAll');
+
+            // 3. 根据名称获取下面的所有复选框；
+            var checkOnes = document.getElementsByName('checkOne');
+//                checkones = [1,2, 3]
+
+            //2. 判断复选框的状态(对象.checked: 如果返回值为true， 则被选中了， 反之， 未选中)
+            if (checkAllEle.checked) {
+                //如果被选中,xxxx
+                //4. 依次改变复选框的状态;（通过循环）
+                for (var i = 0; i < checkOnes.length; i++) {
+                    //5. 拿到每一个复选框并将其设为选中;
+                    checkOnes[i].checked = true;
+                }
+
+
+            } else {
+                // 如果没有被选中,......
+                //4. 依次改变复选框的状态;（通过循环）
+                for (var i = 0; i < checkOnes.length; i++) {
+                    //5. 拿到每一个复选框并将其设为选中;
+                    checkOnes[i].checked = false;
+
+                }
+
+
+            }
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+<!--
+<!--
+1. 需求分析:
+    在后台实现一个批量删除操作, 前台需要全选所有的复选框
+
+
+2. 技术分析:
+    1). 确认事件:鼠标单击事件onclick,绑定事件的位置;
+    2). 获取编号前面的复选框的状态(是否选中)
+            获取复选框: var checkAllEle = document.getElementById("id");
+            获取复选框的状态: checkAllEle.checked
+    3). 获取下面的所有复选框:
+          document.getElementByName("name")
+
+3. 步骤实现:
+
+    1). 确认事件:鼠标单击事件onclick,并对其绑定一个函数;
+    2). 书写函数(书写编号前面的复选框， 获取其状态)
+    3). 判断编号前面复选框的状态
+    4). 如果未选中, 获取下面所有的复选框， 并将其状态置为选中;
+
+
+4. 代码实现:
+
+
+
+-->
+
+
+-->
+
+
+<h1>用户信息</h1>
+<!--创建7行4列的表格-->
+
+<table border="1" align="center" width="40%" cellpadding="8">
+    <tr>
+        <td colspan="4" align="center">
+            <input type="button" value="添加">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="删除">
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <!--确定事件: onclick    绑定函数-->
+            <input type="checkbox" onclick="selectAll()" id="selectAll">
+        </td>
+        <td>编号</td>
+        <td>姓名</td>
+        <td>年龄</td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="checkbox" name="checkOne">
+        </td>
+        <td>001</td>
+        <td>张三</td>
+        <td>22</td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="checkbox" name="checkOne">
+        </td>
+        <td>002</td>
+        <td>李四</td>
+        <td>15</td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="checkbox" name="checkOne">
+        </td>
+        <td>003</td>
+        <td>王麻子</td>
+        <td>22</td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="checkbox" name="checkOne">
+        </td>
+        <td>004</td>
+        <td>粉条</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="checkOne"></td>
+        <td>005</td>
+        <td>粉丝</td>
+        <td>18</td>
+    </tr>
+
+
+</table>
+
+
+</body>
+</html>

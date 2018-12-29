@@ -1,0 +1,37 @@
+# 1. 下载源码包
+
+- 官网地址: https://www.python.org/ftp/python/3.6.4/
+- 拷贝回去Python3.6
+
+# 2. 解包
+# 把源码包解压到/opt目录, /opt一般存放安装的第三方软件;
+tar xf Python-3.6.4.tgz  -C /opt/
+
+#3. 编译
+- 准备工作: 安装gcc(C语言的编译器),因为python解释器是C语言编写的;
+yum install gcc -y
+
+- 进行编译，注意： 先切换到/opt/Python-3.6.4
+# --prefix指定安装目录;
+./configure  --prefix=/ur/local/python
+
+
+# 4.安装
+- 准备工作: 安装zlib-devel
+yum install zlib-devel -y
+
+- 安装
+make && make install
+
+# 5. 使用(创建软链接)
+ln -s /usr/local/python3/bin/python3 /usr/bin/python3
+
+
+# 6. 检测是否成功?
+在shell中输入python3， 看是否会进入python3的交互式环境中;
+
+
+#7. 如何将python3加入到pycharm的IDE工具中;
+
+Ctrl+alt+s  ----> 进入设置界面  ---> Project ->
+

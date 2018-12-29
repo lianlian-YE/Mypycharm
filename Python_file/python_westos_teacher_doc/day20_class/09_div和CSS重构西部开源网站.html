@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <style>
+
+        #alogo {
+            width: 100%;
+            height: 91px;
+            text-align: center;
+        }
+
+        #logoLeft {
+            width: 49%;
+            height: 100%;
+            float: left;
+            text-align: center;
+
+        }
+
+        #logoRight {
+            width: 49%;
+            height: 100%;
+            float: right;
+        }
+
+        span {
+            vertical-align: middle;
+            font-size: 20px;
+            color: #323232;
+            margin-left: 10px;
+        }
+
+        #banner {
+            width: 100%;
+            height: 70px;
+            background-color: dodgerblue;
+            line-height: 70px;
+        }
+
+        #index {
+            font-size: 25px;
+        }
+
+        .children {
+            display: inline-block;
+            /*# 这个标签占用的权重*/
+            /*1 2 3 4*/
+            flex: 2;
+            text-align: center;
+        }
+
+        .children1{
+            display: inline-block;
+            /*# 这个标签占用的权重*/
+            /*1 2 3 4*/
+            flex: 1;
+            text-align: center;
+
+        }
+        #father{
+            display: flex;
+            width: 100%;
+        }
+
+        li a {
+            font-size: 20px;
+            color: white;
+            /*取消链接的下划线等装饰设置*/
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<!--先创建一个logo的盒子-->
+<div id="alogo">
+    <div id="logoLeft">
+        <img src="img/01_logo.png" align="center">
+        <span>西部开源欢迎你！</span>
+    </div>
+
+
+    <div id="logoRight" style="line-height: 91px">
+
+        <img src="img/02_phone1.png" align="center">
+        <span>029-86699937 029-88262419</span>
+    </div>
+
+
+</div>
+
+
+<!--创建导航栏-->
+<div id="banner">
+
+    <!--导航栏信息无序列表-->
+    <ul id="father">
+        <li class="children1"><a id="index" href="#">首页</a></li>&nbsp;&nbsp;&nbsp;
+        <li  class="children"><a href="http://www.westos.org/curriculum-web">课程中心</a></li> &nbsp;&nbsp;&nbsp;
+        <li  class="children"><a href="http://www.westos.org/course-features"> 教学体系</a></li>&nbsp;&nbsp;&nbsp;
+        <li  class="children"><a href="http://www.westos.org/course-features">新闻资讯</a></li>&nbsp;&nbsp;&nbsp;
+        <li  class="children"><a href="http://www.westos.org/course-features">学习资源</a></li>&nbsp;&nbsp;&nbsp;
+        <li  class="children"><a href="http://www.westos.org/course-features">Linux企业文化</a></li>&nbsp;&nbsp;&nbsp;
+
+    </ul>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_onload事件_实现图片的轮播图</title>
+
+    <style>
+        div {
+            text-align: center;
+        }
+    </style>
+    <script>
+        // 定义一全局变量， 控制图片循环的顺序;
+        var i = 1;
+
+        function  init() {
+            //每隔固定时间， 去修改图片(changeImg()),
+            // setInterval默认时间单位为毫秒；
+            setInterval('changeImg()', 3000)
+        }
+
+        function changeImg() {
+//                var img = document.getElementById('img').src;
+//                alert(img);
+
+//                document.getElementById('img').src = 'img/img2.jpg'
+            // 当点击下一页的时候， 循环改变图片的内容;
+
+            // 每次触发事件， 则i+1;实现下一张照片;
+            i++;
+            // 修改照片的链接为下一张照片
+            document.getElementById("img").src = "img/img" + i + ".jpg";
+            // 6为轮播图片的总数， 如果i===6， 则重头轮播, 重置i为1;
+            if (i === 6) {
+                i = 0;
+            }
+        }
+
+
+    </script>
+
+</head>
+<body onload="init()">
+
+
+
+
+<div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <img src="img/img1.jpg" id="img" onclick="changeImg()">
+</div>
+
+
+</body>
+</html>

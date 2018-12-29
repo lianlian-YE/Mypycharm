@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+
+<!--<table> 标签定义 HTML 表格。-->
+    <!--1. 简单的 HTML 表格由 table 元素以及一个或多个 tr、th 或 td 元素组成。-->
+    <!--2. tr 元素定义表格行，th 元素定义表头，td 元素定义表格单元。-->
+    <!--3. border:指定表格边框;cellpadding设置单元格大小, cellspacing设置单元格间距大小,width指定单元格宽度 -->
+    <!--4. <caption>指定表格标题-->
+    <!--5. <th colspan="2">合并两列单元格-->
+    <!--6. <th rowspan="2">合并两行单元格-->
+    <!--7. 颜色关键字查询资料:http://www.css88.com/book/css/appendix/color-keywords.htm#system-->
+    <!--8. 单元格对齐设置: aligin:left, right-->
+    <!--8. 表格边框显示:frame=box, above, below, hsides, vsides-->
+
+
+
+
+<h2> 案例1: 主机信息标签</h2>
+<table width="500" cellpadding="8" cellspacing="5"  border="'1">
+
+    <caption>主机信息表格</caption>
+    <tr bgcolor="antiquewhite">
+        <th>主机名</th>
+        <th>IP地址</th>
+
+    </tr>
+
+    <tr>
+        <td>主机1</td>
+        <td>IP1</td>
+    </tr>
+
+    <tr>
+        <td>主机2</td>
+        <td>IP2</td>
+    </tr>
+    <tr>
+        <td>主机3</td>
+        <td>IP3</td>
+    </tr>
+
+    <tr>
+        <td>主机4</td>
+        <td>IP4</td>
+    </tr>
+
+
+</table>
+
+
+
+<h2>案例2:合并列单元</h2>
+
+
+<table border="1" cellpadding="10" width="500">
+
+    <caption>主机信息表格</caption>
+    <tr>
+        <th>主机名</th>
+        <th colspan="2">IP地址</th>
+
+
+    </tr>
+
+    <tr>
+        <td>主机1</td>
+        <td>IP1</td>
+        <td>IP1</td>
+    </tr>
+
+    <tr>
+        <td>主机2</td>
+        <td>IP2</td>
+        <td>IP2</td>
+    </tr>
+    <tr>
+        <td>主机3</td>
+        <td>IP3</td>
+        <td>IP3</td>
+    </tr>
+
+    <tr>
+        <td>主机4</td>
+        <td>IP4</td>
+        <td>IP4</td>
+    </tr>
+
+</table>
+
+
+
+
+<h2>案例3:合并行单元</h2>
+
+<table border="1" cellpadding="10" width="500">
+
+    <caption>主机信息表格</caption>
+    <tr>
+        <th>主机名</th>
+        <td>主机1</td>
+        <td>主机2</td>
+        <td>主机3</td>
+
+    </tr>
+
+    <tr>
+        <th rowspan="2">IP</th>
+        <td>IP1</td>
+        <td>IP2</td>
+        <td>IP2</td>
+    </tr>
+
+    <tr>
+        <td>IP1</td>
+        <td>IP2</td>
+        <td>IP2</td>
+    </tr>
+
+
+</table>
+
+
+
+<h2>案例4:单元格嵌套标签</h2>
+
+
+
+<table border="1" cellpadding="10" width="500">
+<tr>
+  <td>
+   <p>这是一个段落。</p>
+   <p>这是另一个段落。</p>
+  </td>
+  <td>这个单元包含一个表格：
+   <table border="1" cellpadding="5">
+   <tr>
+     <td>A</td>
+     <td>B</td>
+   </tr>
+   <tr>
+     <td>C</td>
+     <td>D</td>
+   </tr>
+   </table>
+  </td>
+</tr>
+<tr>
+  <td>这个单元包含一个列表：
+   <ul>
+    <li>苹果</li>
+    <li>香蕉</li>
+    <li>菠萝</li>
+   </ul>
+  </td>
+  <td>
+      <img src="http://www.westos.org/images/logo.png">
+
+  </td>
+</tr>
+</table>
+
+
+
+<h2>案例5： 单元格文字对齐</h2>
+<table width="400" border="1">
+ <tr>
+  <th align="left">消费项目....</th>
+  <th align="right">一月</th>
+  <th align="right">二月</th>
+ </tr>
+ <tr>
+  <td align="left">衣服</td>
+  <td align="right">$241.10</td>
+  <td align="right">$50.20</td>
+ </tr>
+ <tr>
+  <td align="left">化妆品</td>
+  <td align="right">$30.00</td>
+  <td align="right">$44.45</td>
+ </tr>
+ <tr>
+  <td align="left">食物</td>
+  <td align="right">$730.40</td>
+  <td align="right">$650.00</td>
+ </tr>
+ <tr>
+  <th align="left">总计</th>
+  <th align="right">$1001.50</th>
+  <th align="right">$744.65</th>
+ </tr>
+</table>
+
+
+</body>
+</html>

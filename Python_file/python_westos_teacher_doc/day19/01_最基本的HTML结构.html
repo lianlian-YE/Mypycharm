@@ -1,0 +1,59 @@
+
+
+<!--HTML是一种用来描述网页的标记性语言。学习HTML可能并不难，
+主要是要记一些HTML标签和标签代表的含义。-->
+
+
+
+<!--****************    1. <!DOCTYPE> 是HTML5声明      *************-->
+    <!--，<!DOCTYPE> 必须是 HTML 文档的第一行，位于 <html> 标签之前。
+    <!DOCTYPE>是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。-->
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<!--************************    2. head标签       *************************-->
+    <!-- head标签是所有头部元素的容器。head标签内的元素可包含脚本、样式表和提供页面的元信息等等。
+    以下标签都可以添加到 head 部分：title、base、link、meta、script 以及style。
+    头部的内容不会显示在浏览器的。 -->
+
+
+<head>
+
+
+<!--***********************     3. 设置字符集    ***********************    -->
+    <!-- 设置字符集，如果字符集不对，可能导致乱码。一般建议utf-8国际编码 -->
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=gb2312或utf-8或gbk" />-->
+    <meta charset="UTF-8">
+
+
+<!--**************************  4.SEO标签     *****************************    -->
+    <!-- SEO相关标签，title定义文档的标题,百度建议一般不要超过32位,
+         meta定义页面关键词和页面的描述-->
+    <title>个人博客</title>
+    <meta name="keywords" content="python程序员,技术博客,个人博客">
+    <meta name="description" content="博客是一个优秀的个人技术博客。博客记录了Linux学习，
+    python开发与编程，Web前端开发，MySQL学习和教程，NoSQL数据库教程以及个人的人生经历和观点。">
+
+
+
+    <!--关联其他让页面更加美化的css和javascripts-->
+
+    <link rel="stylesheet" type="text/css", href="main.css"/>
+    <script type="text/javascripts" src="main.js"></script>
+</head>
+
+
+
+<!--************************    5. 正文部分 ************************-->
+<!-- 正文部分，所有在浏览器上可见的内容必须写在body标签内部 -->
+<body>
+
+
+this is a first html page!
+hello world
+
+
+</body>
+</html>

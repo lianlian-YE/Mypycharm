@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态添加城市</title>
+    <script>
+        window.onload = function () {
+            document.getElementById("btn").onclick = function () {
+                // 1. 获取ul节点元素
+                var ulEle = document.getElementById("ul1");
+
+                //2. 创建城市文本节点
+                var inputText = document.getElementById('city').value;
+
+                var textNode = document.createTextNode(inputText);  // 深圳
+//                var textNode = document.createTextNode("深圳");  // 深圳
+
+
+                // 3. 创建li元素节点
+                var liEle = document.createElement("li");   //<li></li>
+
+                // 4. 将城市文本节点添加到li元素节点中去;
+                liEle.appendChild(textNode);    //<li>深圳</li>
+
+                //5. 将li添加到ul里面去
+                ulEle.appendChild(liEle);
+
+
+            }
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+<!--
+
+
+
+Document方法的补充， 在手册中查不到:
+    1). 创建文本节点: document.createTextNode()
+    2). 创建元素节点: document.createElement()
+
+
+1. 需求分析:
+    点击一个按钮， 动态实现添加城市;
+
+2. 实现步骤分析:
+    1). 事件: onclick()
+    2). 获取ul元素节点;
+    3). 创建一个城市的文本节点，
+    4). 创建一个li元素节点；
+    5). 将文本节点添加到li元素节点中去;
+    6). element里面的appendChild()来添加子节点
+
+
+
+
+-->
+<input type="text" id="city" name="city">
+<input type="button" value="添加城市" id="btn">
+
+<ul id="ul1">
+    <li>北京</li>
+    <li>上海</li>
+    <li>广州</li>
+
+</ul>
+
+</body>
+</html>

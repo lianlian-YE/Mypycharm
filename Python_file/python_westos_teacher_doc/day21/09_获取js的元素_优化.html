@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13_获取js的元素</title>
+
+
+    <script>
+        function showTips(id, info) {
+            document.getElementById(id + "Tip").innerHTML = "<span  style='color: lightgrey'>" + info + "</span>"
+
+        }
+
+
+        function Check(id, info) {
+            // 1). 获取用户填写的用户信息
+            var uValue = document.getElementById(id).value;
+            if (uValue === "") {
+                document.getElementById(id + "Tip").innerHTML = "<span style='color: red' >" + info + "</span>"
+            } else {
+                document.getElementById(id + 'Tip').innerHTML = "<span style='color: greenyellow'>ok</span>"
+            }
+        }
+
+        function CheckPasswd() {
+            var passwd = document.getElementById('passwd').value;
+            var repasswd = document.getElementById('repasswd').value;
+            if (passwd !== repasswd) {
+                document.getElementById('repasswdTip').innerHTML = "<span style='color: red' >" + "密码必须一致" + "</span>"
+            } else {
+                document.getElementById('repasswdTip').innerHTML = "<span style='color: greenyellow'>ok</span>"
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+
+<!--
+
+需要学习的两个事件:
+    聚焦事件: onfocus
+    离焦事件:onblur
+
+
+
+
+
+-->
+<form action="" method="get" onsubmit="return checkForm()">
+
+    用户名: <input type="text" name="user" id="user" onfocus="showTips('user', '用户名不能为空')"
+                onblur="Check('user', '用户名不能为空')">
+    <span id="userTip"></span>
+    <br/>
+    密码:<input type="password" name="passwd" id="passwd" onfocus="showTips('passwd', '密码不能为空')"
+              onblur="Check('passwd', '密码不能为空')">
+    <span id="passwdTip"></span>
+    <br/>
+    确认密码:<input type="password" name="repasswd" id="repasswd" onfocus="showTips('repasswd', '密码必须一致')"
+                onblur="CheckPasswd()">
+    <span id="repasswdTip"></span><br/>
+    邮箱:<input type="text" name="email" id="email"><br/>
+    <input type="submit" value="登录">
+
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13_动态添加城市</title>
+    <script>
+            function  addCity() {
+                //1. 获取ul元素
+                var ulEle = document.getElementById('ulItem');
+
+
+                //2. 获取用户输入的城市;
+                var inputText = document.getElementById('city').value;
+                // 创建文本节点; 深圳
+                var textNode = document.createTextNode(inputText);
+
+                //3. 创建新的li节点; <li></li>
+                var liEle = document.createElement("li");
+
+
+                //4. 将文本内容添加到li里面去;<li>深圳</li>
+                liEle.appendChild(textNode);
+
+                //4. 添加li节点到ul里面;
+                ulEle.appendChild(liEle)
+            }
+    </script>
+</head>
+<body>
+
+
+<!--
+Document方法里面查不到的方法:
+    1). 创建一个文本节点: document.createTextNode()
+    2). 创建元素节点: document.createElement()
+
+
+
+
+1. 确定事件: onclick;
+2. 获取ul元素节点;
+3. 添加城市到ul里面去
+-->
+
+
+
+
+
+<input type="text" id="city" name="city">
+<input type="button" value="添加城市" id="btn" onclick="addCity()">
+
+
+
+<ul id="ulItem">
+    <li>北京</li>
+    <li>上海</li>
+    <li>广州</li>
+
+
+</ul>
+
+</body>
+</html>

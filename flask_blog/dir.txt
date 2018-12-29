@@ -1,0 +1,10 @@
+myflask/
+    User/
+        templates/
+        view.py
+    Blog/
+        templates/
+        view.py
+    run.py
+
+

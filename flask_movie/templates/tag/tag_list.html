@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block newcontent %}
+     <div class="col-md-8">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href={{ url_for('tag.add') }}>添加标签</a></li>
+            <li role="presentation" ><a href={{ url_for('tag.list') }}>标签列表</a></li>
+        </ul>
+        <div class="panel panel-default panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-plus-sign"></span>编辑标签</h3>
+            </div>
+            <div class="panel-body">
+                {% for message in get_flashed_messages() %}
+                    <div class="alert alert-warning">
+                    <button type="button" class="close" data-dismiss="alert"></button>
+                    {{ message }}
+                    </div>
+                {% endfor %}
+                <table class="table table-bordered">
+                    <tr>
+                        <td>编号</td>
+                        <td>名称</td>
+                        <td>添加时间</td>
+                        <td>操作事项</td>
+                    </tr>
+                    {% for tag in tags.items %}
+                        <tr>
+                            <td>{{ tag.id }}</td>
+                            <td>{{ tag.name }}</td>
+                            <td>{{ tag.add_time }}</td>
+                            <td>
+                                <a class="btn btn-sm btn-success" href="{{ url_for('tag.edit',id=tag.id) }}" role="button">
+                                    编辑
+                                </a>
+                                <a class="btn btn-sm btn-danger" href="{{ url_for('tag.delete',id=tag.id) }}" role="button">
+                                    删除
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% from 'macro_page.html' import paginate%}
+            {{ paginate('tag.list',tags) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

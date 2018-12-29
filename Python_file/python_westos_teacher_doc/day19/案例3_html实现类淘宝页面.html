@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝</title>
+</head>
+<body>
+
+
+<!--
+    1. 创建8行一列的表格;
+    2. 实现第一行, 嵌套一个表格一行三列的表格, 分别对单元格写入数据;
+    3. 实现第二行导航栏,暂时使用字体标签结合超链接， 需要设置当前单元格颜色和字体颜色；
+    4. 实现第3行(直接放置一张图片);
+    5. 实现第4行热门商品, 嵌套一个单元格(3行7列的表格)
+    6. 5行放置一张广告图片
+    7. 6行复制第四行代码;
+    8. 7行放置一张广告图片
+    9. 8行, 使用字体标签和超链接标签完成友情链接和版权信息;
+-->
+
+
+<!--1. 创建8行一列的表格;-->
+<table width="80%" align="center">
+
+
+    <!--2. logo部分-->
+    <tr>
+        <td>
+            <!--创建一个一行三列的表格-->
+            <table width="100%" align="center" cellpadding="0px" cellspacing="0px">
+                <tr height="50px">
+                    <td width="33.3%">
+                        <img src="http://www.westos.org/images/ali.png">
+                    </td>
+                    <td width="33.3%">
+
+                    </td>
+                    <td width="33.3%">
+                        <a href="#">登录</a>
+                        <a href="案例4_淘宝登录界面.html">注册</a>
+                        <a href="#">购物车</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+
+    <!--3. 导航栏-->
+    <tr height="50px">
+        <td bgcolor="Darkorange">
+            &nbsp;&nbsp;&nbsp;<a href="#"><font size="5" color="white">首页</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><font color="white">手机数码</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><font color="white">电脑办公</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><font color="white">家用电器</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><font color="white">运动户外</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><font color="white">运动户外</font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><font color="white">童装玩具</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        </td>
+    </tr>
+
+
+    <!--4. 轮播图-->
+    <tr>
+        <td>
+
+            <img src="https://s1.tuchong.com/content-image/201805/bb6532bae9f17785ab3191642bd9b292.jpg" width="100%">
+
+        </td>
+    </tr>
+
+
+    <!--5. 最新商品-->
+    <tr>
+        <td>
+            <!--创建3行7列的表格-->
+            <table width="100%" height="'50px">
+                <tr height="50px">
+                    <td bgcolor="Darkorange" colspan="7">
+                        &nbsp;&nbsp;&nbsp;<b><font size="4" color="white">最新商品</font></b>
+
+                    </td>
+
+                </tr>
+                <tr>
+
+                    <!--竖向广告-->
+                    <td bgcolor="Darkorange" rowspan="2" width="190px" height="300px">
+                        <img src="https://img.alicdn.com/tps/i4/TB16GtDsb1YBuNjSszewu1blFXa.png_290x290Q75s0.jpg_.webp"
+                             height="100%">
+                    </td>
+
+                    <!--横向广告-->
+                    <td align="center" colspan="3" width="300px" height="100px">
+
+                        <img src="https://img.alicdn.com/simba/img/TB1CP9ltACWBuNjy0FaSutUlXXa.jpg">
+                    </td>
+
+
+                    <!--其他商品信息-->
+                    <td>
+                        <img src="https://gma.alicdn.com/bao/uploaded/i4/126123842/TB2h1gsquOSBuNjy0FdXXbDnVXa_!!0-saturn_solar.jpg_200x200.jpg_.webp">
+                        <p><font size="2">巴厘岛沙滩裙女夏2017新款显瘦海边度假白色仙女裙泰国普吉岛裙子</font></p>
+                        <font color="red" size="5">¥99.90</font>
+                    </td>
+                    <td>
+                        <img src="https://gma.alicdn.com/bao/uploaded/i3/1488206070407673970/TB2L6X0uCFjpuFjSszhXXaBuVXa_!!0-saturn_solar.jpg_200x200.jpg_.webp">
+                        <p><font size="2">卧室墙纸3D立体无纺布精压欧式田园温馨浮雕客厅电视背景墙壁纸</font></p>
+                        <font color="red" size="5">¥36.00</font>
+                    </td>
+
+                    <td>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/2461796952/TB1LfRco41YBuNjy1zcXXbNcXXa_!!0-item_pic.jpg_200x200q90.jpg_.webp">
+                        <p><font size="2">格力电风扇台式转页扇家用落地扇台扇学生宿舍定时鸿运扇静音风扇</font></p>
+                        <font color="red" size="5">¥79.00</font>
+                    </td>
+                </tr>
+                <tr>
+                    <!--其他商品信息-->
+                    <td>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/829898992/TB29f2OtpXXXXXPXpXXXXXXXXXX_!!829898992.jpg_200x200q90.jpg_.webp">
+                        <p><font size="2">古典树叶流苏步摇簪子金色复古简约盘发头饰新娘古装汉服宫廷发簪</font></p>
+                        <font color="red" size="5">¥57.60</font>
+
+                    </td>
+                    <td>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/336872749/TB2nF4Qi3JlpuFjSspjXXcT.pXa_!!336872749.jpg_200x200q90.jpg_.webp">
+                        <p><font size="2">包邮古装头冠汉服女款束发cos发冠发簪子流苏发夹莲花发饰顶夹 女</font></p>
+                        <font color="red" size="5">¥21.60</font>
+                    </td>
+                    <td>
+                        <img src="https://gma.alicdn.com/bao/uploaded/i3/1488206070407673970/TB2L6X0uCFjpuFjSszhXXaBuVXa_!!0-saturn_solar.jpg_200x200.jpg_.webp">
+                        <p><font size="2">卧室墙纸3D立体无纺布精压欧式田园温馨浮雕客厅电视背景墙壁纸</font></p>
+                        <font color="red" size="5">¥36.00</font>
+                    </td>
+
+                    <td>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/336872749/TB2nF4Qi3JlpuFjSspjXXcT.pXa_!!336872749.jpg_200x200q90.jpg_.webp">
+                        <p><font size="2">包邮古装头冠汉服女款束发cos发冠发簪子流苏发夹莲花发饰顶夹 女</font></p>
+                        <font color="red" size="5">¥21.60</font>
+                    </td>
+                    <td>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/2461796952/TB1LfRco41YBuNjy1zcXXbNcXXa_!!0-item_pic.jpg_200x200q90.jpg_.webp">
+                        <p><font size="2">格力电风扇台式转页扇家用落地扇台扇学生宿舍定时鸿运扇静音风扇</font></p>
+                        <font color="red" size="5">¥79.00</font>
+                    </td>
+                    <td>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/336872749/TB2nF4Qi3JlpuFjSspjXXcT.pXa_!!336872749.jpg_200x200q90.jpg_.webp">
+                        <p><font size="2">包邮古装头冠汉服女款束发cos发冠发簪子流苏发夹莲花发饰顶夹 女</font></p>
+                        <font color="red" size="5">¥21.60</font>
+                    </td>
+                </tr>
+
+
+            </table>
+
+
+        </td>
+    </tr>
+
+
+    <!--6. 广告图片-->
+    <tr>
+        <td>
+            <img src="https://img.alicdn.com/simba/img/TB1J.BIcWmWBuNkHFJHSuuatVXa.jpg" width="100%">
+
+        </td>
+    </tr>
+
+
+    <!--7. 热门商品-->
+    <tr>
+        <td>
+            <!--创建3行7列的表格-->
+            <table width="100%" height="'50px">
+                <tr height="50px">
+                    <td bgcolor="mediumorchid" colspan="7">
+                        &nbsp;&nbsp;&nbsp;<b><font size="4" color="white">热门商品</font></b>
+
+                    </td>
+
+                </tr>
+                <tr>
+
+                    <!--竖向广告-->
+                    <td bgcolor="mediumorchid" rowspan="2" width="190px" height="300px">
+                        <img src="https://img.alicdn.com/tps/i4/TB16GtDsb1YBuNjSszewu1blFXa.png_290x290Q75s0.jpg_.webp"
+                             height="100%">
+                    </td>
+
+                    <!--横向广告-->
+                    <td align="center" colspan="3" width="300px" height="100px">
+
+                        <img src="https://img.alicdn.com/simba/img/TB1CP9ltACWBuNjy0FaSutUlXXa.jpg">
+                    </td>
+
+
+                    <!--其他商品信息-->
+                    <td>
+                        <img src="https://gma.alicdn.com/bao/uploaded/i4/126123842/TB2h1gsquOSBuNjy0FdXXbDnVXa_!!0-saturn_solar.jpg_200x200.jpg_.webp">
+                        <p><font size="2">巴厘岛沙滩裙女夏2017新款显瘦海边度假白色仙女裙泰国普吉岛裙子</font></p>
+                        <font color="red" size="5">¥99.90</font>
+                    </td>
+                    <td>
+                        <img src="https://gma.alicdn.com/bao/uploaded/i3/1488206070407673970/TB2L6X0uCFjpuFjSszhXXaBuVXa_!!0-saturn_solar.jpg_200x200.jpg_.webp">
+                        <p><font size="2">卧室墙纸3D立体无纺布精压欧式田园温馨浮雕客厅电视背景墙壁纸</font></p>
+                        <font color="red" size="5">¥36.00</font>
+                    </td>
+
+                    <td>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/2461796952/TB1LfRco41YBuNjy1zcXXbNcXXa_!!0-item_pic.jpg_200x200q90.jpg_.webp">
+                        <p><font size="2">格力电风扇台式转页扇家用落地扇台扇学生宿舍定时鸿运扇静音风扇</font></p>
+                        <font color="red" size="5">¥79.00</font>
+                    </td>
+                </tr>
+                <tr>
+                    <!--其他商品信息-->
+
+                    <td>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/336872749/TB2nF4Qi3JlpuFjSspjXXcT.pXa_!!336872749.jpg_200x200q90.jpg_.webp">
+                        <p><font size="2">包邮古装头冠汉服女款束发cos发冠发簪子流苏发夹莲花发饰顶夹 女</font></p>
+                        <font color="red" size="5">¥21.60</font>
+                    </td>
+                    <td>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/829898992/TB29f2OtpXXXXXPXpXXXXXXXXXX_!!829898992.jpg_200x200q90.jpg_.webp">
+                        <p><font size="2">古典树叶流苏步摇簪子金色复古简约盘发头饰新娘古装汉服宫廷发簪</font></p>
+                        <font color="red" size="5">¥57.60</font>
+
+                    </td>
+                    <td>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/336872749/TB2nF4Qi3JlpuFjSspjXXcT.pXa_!!336872749.jpg_200x200q90.jpg_.webp">
+                        <p><font size="2">包邮古装头冠汉服女款束发cos发冠发簪子流苏发夹莲花发饰顶夹 女</font></p>
+                        <font color="red" size="5">¥21.60</font>
+                    </td>
+                    <td>
+                        <img src="https://gma.alicdn.com/bao/uploaded/i4/126123842/TB2h1gsquOSBuNjy0FdXXbDnVXa_!!0-saturn_solar.jpg_200x200.jpg_.webp">
+                        <p><font size="2">巴厘岛沙滩裙女夏2017新款显瘦海边度假白色仙女裙泰国普吉岛裙子</font></p>
+                        <font color="red" size="5">¥99.90</font>
+                    </td>
+                    <td>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/336872749/TB2nF4Qi3JlpuFjSspjXXcT.pXa_!!336872749.jpg_200x200q90.jpg_.webp">
+                        <p><font size="2">包邮古装头冠汉服女款束发cos发冠发簪子流苏发夹莲花发饰顶夹 女</font></p>
+                        <font color="red" size="5">¥21.60</font>
+
+                    </td>
+                    <td>
+                        <img src="https://gma.alicdn.com/bao/uploaded/i3/1488206070407673970/TB2L6X0uCFjpuFjSszhXXaBuVXa_!!0-saturn_solar.jpg_200x200.jpg_.webp">
+                        <p><font size="2">卧室墙纸3D立体无纺布精压欧式田园温馨浮雕客厅电视背景墙壁纸</font></p>
+                        <font color="red" size="5">¥36.00</font>
+                    </td>
+                </tr>
+
+
+            </table>
+
+
+        </td>
+    </tr>
+
+    <!--8.广告图片 -->
+    <tr>
+        <td>
+            <img src="https://img.alicdn.com/simba/img/TB1J.BIcWmWBuNkHFJHSuuatVXa.jpg" width="100%">
+
+        </td>
+    </tr>
+
+
+    <!--9. 友情链接和版权信息-->
+    <tr>
+        <td align="center">
+            <br>
+            <a href="#">关于淘宝</a>
+            <a href="#">合作伙伴</a>
+            <a href="#">营销中心</a>
+            <a href="#">廉正举报</a>
+            <a href="#">联系客服</a>
+            <a href="#">开放平台</a>
+            <a href="#"> 诚征英才</a>
+            <a href="#">联系我们</a>
+            <a href="#">网站地图</a>
+            <a href="#">法律声明</a>
+            <a href="#">知识产权</a>
+            <br>
+            <p>© 2003-现在 Taobao.com 版权所有</p>
+        </td>
+
+    </tr>
+
+
+</table>
+
+
+</body>
+</html>

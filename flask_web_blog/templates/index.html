@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+hello,
+{% if current_user.is_authenticated %}
+{{ current_user.uname }}
+{% else %}
+    stranger
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+
+
+<h2> 案例1： form标签 </h2>
+
+<p>
+form标签定义提交方式、提交地址、表单字符集以及如何对其进行编码，需要提交的表单一定要放在form标签内。
+</p>
+
+
+
+<!--<form id="form1" name="'form1", method="">-->
+    <!---->
+
+
+
+<!--</form>-->
+
+
+
+<h2>案例2： input标签之用户登录界面 </h2>
+
+<ul>
+    <li>文本域：type="text</li>
+    <li>密码域：type="password</li>
+    <li>文本域： textarea标签</li>
+    <li>提交按钮: type="submit"</li>
+    <li>重置按钮:type="reset"</li>
+    <li>文件上传按钮:type="file"</li>
+
+</ul>
+<form>
+<span>用户:</span><input name="userName" type="text" maxlength="5" size="50" value="root">
+<br>
+<br>
+<span>密码:</span><input name="passwd" type="password" maxlength="5" size="50" value="password">
+<br>
+<br>
+<input type="submit" name="submit" value="登录"> &nbsp;&nbsp;
+<input type="reset" name="submit2" value="重置">
+
+<br>
+<br>
+
+
+<p>用户详细信息提交:</p>
+<textarea rows="10" cols="30"></textarea>
+
+
+    <input type="reset" name="submit2" value="重置">
+
+
+<p>请选择上传的文件:</p><input type="file" name="file" />
+</form>
+
+
+<h3>案例3：复选框 </h3>
+<p> 解释:用户可以选中或取消选取复选框。</p>
+
+<form>
+    <p>你喜欢的音乐:</p>
+    <ul>
+    <li><span>说散就散&nbsp;</span><input type="checkbox" name="说散就散"></li>
+
+    <li><span>后来没有后来&nbsp;</span><input type="checkbox" name="后来没有后来"></li>
+    </ul>
+    <br>
+
+    <input type="submit" name="submit" value="提交">
+
+</form>
+
+
+
+<h3>案例3：单选按钮</h3>
+
+<form>
+男性：
+<input type="radio" checked="checked" name="Sex" value="male" />
+<br />
+女性：
+<input type="radio" name="Sex" value="female" />
+</form>
+
+
+<h3>案例4：下拉列表</h3>
+<form>
+<select name="编程语言">
+    <option value="python">Python</option>
+    <option value="java">JAVA</option>
+    <option value="python">Python</option>
+    <option value="c">C</option>
+    <option value="c++">C++</option>
+</select>
+</form>
+
+
+
+<h3>案例5：围绕数据的Fieldset</h3>
+<form>
+  <fieldset>
+      <legend>用户登录</legend>
+      <br>
+      <div align="middle">
+
+        用户：<input type="text" />
+          <br>
+          <br>
+        密码：<input type="password" />
+        <br>
+        <br>
+        <input type="submit" name="submit" value="登录"> &nbsp;&nbsp;
+        <input type="reset" name="submit2" value="重置">
+          </div>
+  </fieldset>
+
+
+</form>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

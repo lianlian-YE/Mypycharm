@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全选与全不选</title>
+    <style>
+        tr {
+
+            text-align: center;
+        }
+
+        .check {
+            width: 50px;
+        }
+    </style>
+
+    <script>
+        function checkAll() {
+            // 1. 获取编号前面的复选框;
+            var checkAllEle = document.getElementById('checkAll');
+            // 2. 对编号前面复选框的状态进行判断;
+            if (checkAllEle.checked) {
+                //3. 根据名称获取下面所有的复选框;
+                var checkOnes = document.getElementsByName('checkOne');
+
+                //4. 依次遍历下面复选框的内容， 进行操作;
+                for (var i = 0; i < checkOnes.length; i++) {
+                    //5. 拿到每一个复选框， 并将其状态设置为选中;
+                    checkOnes[i].checked = true;
+                }
+            } else {
+                //3. 根据名称获取下面所有的复选框;
+                var checkOnes = document.getElementsByName('checkOne');
+
+                //4. 依次遍历下面复选框的内容， 进行操作;
+                for (var i = 0; i < checkOnes.length; i++) {
+                    //5. 拿到每一个复选框， 并将其状态设置为未选中;
+                    checkOnes[i].checked = false;
+                }
+
+
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+<h1 align="center" style="color: blue"> 用户信息 </h1>
+<!--1. 创建一个八行四列的表格-->
+<table border="1" cellpadding="10" width="600" align="center">
+    <tr>
+        <td colspan="4" align="center">
+            <input type="button" value="添加">&nbsp;&nbsp;
+            <input type="button" value="删除">
+        </td>
+
+    </tr>
+
+    <tr>
+        <!--无额定事件及事件编写的位置;-->
+        <td class="check"><input type="checkbox" onclick="checkAll()" id="checkAll"></td>
+        <td>编号</td>
+        <td>姓名</td>
+        <td>年龄</td>
+    </tr>
+    <tr>
+        <td class="check"><input type="checkbox" name="checkOne"></td>
+        <td>1</td>
+        <td>张三</td>
+        <td>22</td>
+
+    </tr>
+
+    <tr>
+        <td class="check"><input type="checkbox" name="checkOne"></td>
+        <td>2</td>
+        <td>粉条</td>
+        <td>12</td>
+
+    </tr>
+    <tr>
+        <td class="check"><input type="checkbox" name="checkOne"></td>
+        <td>3</td>
+        <td>粉带</td>
+        <td>32</td>
+
+    </tr>
+    <tr>
+        <td class="check"><input type="checkbox" name="checkOne"></td>
+        <td>4</td>
+        <td>粉丝</td>
+        <td>18</td>
+
+    </tr>
+    <tr>
+        <td class="check"><input type="checkbox" name="checkOne"></td>
+        <td>5</td>
+        <td>粉猪</td>
+        <td>5</td>
+
+    </tr>
+
+</table>
+
+
+</body>
+</html>

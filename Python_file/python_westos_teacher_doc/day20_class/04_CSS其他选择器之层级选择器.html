@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_CSS其他选择器之层级选择器</title>
+
+    <style>
+        /*<!--元素选择器:-->*/
+        /*img{*/
+            /*width: 500px;*/
+            /*height: 500px;*/
+        /*}*/
+
+
+        /*!*类选择器*!*/
+        /*.out_img{*/
+            /*width: 202px;*/
+            /*height: 160px;*/
+
+        /*}*/
+
+
+        /*!*id选择器*!*/
+        /*#out_img1{*/
+            /*width: 202px;*/
+            /*height: 160px;*/
+
+        /*}*/
+
+
+
+        /*!*层级选择器*!*/
+        /*div img{*/
+            /*width: 202px;*/
+            /*height: 160px;*/
+        /*}*/
+        /**/
+
+        table img{
+
+            width: 202px;
+            height: 160px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div>
+    <p>hello</p>
+    <img  class="out_img" id="out_img1" src="img/01_logo.png">
+</div>
+
+
+<!--两行两列的表格-->
+<table width="80%" cellpadding="8px" border="1px">
+    <caption>表信息</caption>
+    <tr>
+        <td>主机名</td>
+        <td>IP地址</td>
+    </tr>
+    <tr>
+        <td><p>www.baidu.com</p></td>
+        <td><img src="img/01_logo.png"></td>
+    </tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

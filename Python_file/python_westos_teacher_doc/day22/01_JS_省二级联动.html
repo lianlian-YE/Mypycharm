@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_JS</title>
+    <script>
+
+        //0. 创建一个二维数组， 用来存储省份和城市的对应关系;
+        var cities = new Array();
+        cities[0] = new Array("西安", "宝鸡", "咸阳");
+        cities[1] = new Array("太原", "大同", "吕梁");
+
+        function changeCity(val) {
+
+
+            //1. 获取选择城市的select标签;
+            var cityEle = document.getElementById('city');
+
+            //last: 清空之前添加的option标签;
+//            cityEle.options.length = 0;
+            cityEle.innerHTML = "";
+
+            //2. 获取选择省份的所有城市
+            var selectCites = cities[val];
+            //3. 依次遍历城市
+            for (var i = 0; i < selectCites.length; i++) {
+                //3. 添加<option>西安</option>
+                //3-1. 创建城市的文本节点;
+                var textNode = document.createTextNode(selectCites[i]);
+
+                //3-2. 创建option的元素节点; <option></option>
+                var opEle = document.createElement("option");
+
+
+                //3-3. 将城市的文本节点和option的元素节点组合;<option>城市</option>
+                opEle.appendChild(textNode);
+
+
+                //3-4. 将opEle添加到select标签里面;
+                cityEle.appendChild(opEle);
+            }
+
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+
+<!--this.value: 获取select标签里面用户选择的省份-->
+<select id="province" onchange="changeCity(this.value)">
+    <option>----请选择省份-----</option>
+    <option value="0">陕西</option>
+    <option value="1">山西</option>
+</select>
+<select id="city">
+
+</select>
+
+
+</body>
+</html>

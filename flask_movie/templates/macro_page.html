@@ -1,0 +1,24 @@
+{% macro paginate(fname,todos) %}
+    <ul class="pagination">
+        {% if todos.has_prev %}
+            <li><a href="{{ url_for(fname,page=todos.prev_num) }}">前一页</a></li>
+        {% else %}
+            <li class="disabled"><a href="#">前一页</a></li>
+        {% endif %}
+
+        {% for page in todos.iter_pages(right_current=2) %}
+            {% if page==todos.page %}
+                <li class="active"><a href="{{ url_for(fname,page=page) }}">{{ page }}</a></li>
+            {% elif page==None %}
+                <li class="disabled"><a href="{{ url_for(fname,page=1) }}">...</a></li>
+            {% else %}
+                <li><a href="{{ url_for(fname,page=page) }}">{{ page }}</a></li>
+            {% endif %}
+        {% endfor %}
+        {% if todos.has_next %}
+            <li><a href="{{ url_for(fname,page=todos.next_num) }}">后一页</a></li>
+        {% else %}
+            <li class="disabled"><a href="#"></a>后一页</li>
+        {% endif %}
+    </ul><br>
+{% endmacro %}

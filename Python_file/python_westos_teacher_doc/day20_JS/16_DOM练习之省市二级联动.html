@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1. 创建一个二维数组用于存储省份和城市;
+        // 创建数组的两种方式;
+        var cities = new Array();
+        cities[0] = new Array("西安", "咸阳", "宝鸡");
+        cities[1] = new Array("成都", "绵阳", "乐山");
+        cities[2] = new Array("济南", "青岛", "济宁");
+
+
+        function changeCity(val) {
+            // 7. 获取第二个下拉列表
+            var cityEle = document.getElementById("city");
+
+            // 9. 清空第二个下拉列表的option内容;
+            cityEle.options.length=0;
+
+            // 2. 遍历二维数组中的省份;
+            for (var i = 0; i < cities.length; i++) {
+                // 注意： 比较的是下标
+                if (val == i) {
+                    // 3. 遍历用户选择省份下的城市
+                    for (var j = 0; j < cities[i].length; j++) {
+//                        alert(cities[i][j]);
+                        // 4. 创建城市的文本节点;
+                        var textNode = document.createTextNode(cities[i][j]);
+
+                        // 5. 创建option元素节点；
+                        var opEle = document.createElement("option");
+
+
+                        //6. 将城市的文本节点添加到option元素节点中;
+                        opEle.appendChild(textNode);
+
+
+                        // 8. 将option添加到第二个下拉列表中去;
+                        cityEle.appendChild(opEle);
+
+
+                    }
+
+                }
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+
+<!--
+1. 需求分析；
+    省市二级联动
+
+2. 技术分析:
+    事件(onchange)
+    使用一个二维数组来存储省份和城市（二维数组的创建;）;
+    获取用户选择的省份(使用方法传参的方式: this.value);
+    遍历数组(获取省份与用户选择的省份比较， 如果相同,继续遍历该省份下的所有城市)
+    创建文本节点和元素节点并进行添加操作;
+
+
+    createTextNode()
+    createElement()
+    appendChild()
+
+
+3. 步骤实现:
+    1). 确定事件(onchange)并为其绑定一个函数;
+    2). 创建一个二维数组用于存储省份和城市;
+    3). 获取用户选择的省份;
+    4). 遍历二维数组中的省份;
+    5). 将遍历的省份与用户选择的省份进行比较;
+    6). 如果相同， 遍历该省份下的所有城市;
+    7). 创建城市文本节点;
+    8). 创建option元素节点;
+    9). 将城市文本节点添加到option元素节点中去；
+    10). 获取第二个下拉列表， 并将option元素添加进去；
+
+
+
+-->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<form>
+    <table width="400px" align="center">
+        <tr>
+            <td>籍贯:</td>
+            <td>
+
+                <select id="province" onchange="changeCity(this.value)">
+                    <option>-----请选择------</option>
+                    <option value="0"> 陕西</option>
+                    <option value="1"> 四川</option>
+                    <option value="2"> 山东</option>
+                </select>
+                <select id="city">
+
+                </select>
+
+            </td>
+        </tr>
+
+
+    </table>
+
+</body>
+</html>
