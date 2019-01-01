@@ -1,8 +1,8 @@
-from models import db, Admin
 from flask_migrate import Migrate,MigrateCommand
 from flask_script import Shell,Manager
 from config import app
 from getpass import getpass
+from models import db, Admin
 manager=Manager(app)
 migrate=Migrate(app,db)
 manager.add_command('db',MigrateCommand)

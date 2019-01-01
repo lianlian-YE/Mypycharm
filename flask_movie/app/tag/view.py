@@ -1,5 +1,5 @@
 from flask import Blueprint, flash, redirect, url_for, render_template, request
-from models import Tag
+from models import Tag, opLog
 from .form import tagForm
 from models import db
 
@@ -22,6 +22,12 @@ def add():
             db.session.add(tag)
             db.session.commit()
             flash('标签添加成功！')
+            oplog = opLog(user_id=1,
+                          ip=request.remote_addr,
+                          reason='新增标签%s信息' % (tag.name)
+                          )
+            db.session.add(oplog)
+            db.session.commit()
             return redirect((url_for('tag.add')))
     else:
         return render_template('tag/tag_add.html',form=form)
@@ -42,6 +48,12 @@ def edit(id):
             db.session.add(tag)
             db.session.commit()
             flash('修改标签成功！')
+            oplog = opLog(user_id=1,
+                          ip=request.remote_addr,
+                          reason='修改标签%s信息' % (tag.name)
+                          )
+            db.session.add(oplog)
+            db.session.commit()
             return redirect(url_for('tag.list',id=id))
     else:
         return render_template('tag/tag_edit.html',form=form,tag=tag)
@@ -51,6 +63,12 @@ def delete(id):
     db.session.delete(tag)
     db.session.commit()
     flash('删除%s成功'%tag.name)
+    oplog = opLog(user_id=1,
+                  ip=request.remote_addr,
+                  reason='删除标签%s信息' % (tag.name)
+                  )
+    db.session.add(oplog)
+    db.session.commit()
     return redirect(url_for('tag.list'))
 @tagbp.route('/list/')
 @tagbp.route('/list/<int:page>/')

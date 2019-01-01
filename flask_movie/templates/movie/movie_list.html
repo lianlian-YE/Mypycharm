@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block newcontent %}
+    <div class="col-md-8">
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="{{ url_for('movie.add') }}">添加电影</a></li>
+        <li role="presentation"><a href="{{ url_for('movie.list') }}">电影列表</a></li>
+    </ul>
+    <div class="panel panel-default panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title"><span class="glyphicon glyphicon-plus-sign"></span>添加电影</h3>
+        </div>
+        <div class="panel-body">
+
+            {% for message in get_flashed_messages() %}
+                <div class="alert alert-warning">
+                    <button type="button" class="close" data-dismiss="alert"></button>
+                    {{ message }}
+                </div>
+            {% endfor %}
+        <table class="table table-bordered">
+            <tr>
+                <td>电影名</td>
+                <td>电影时长</td>
+                <td>标签</td>
+                <td>地区</td>
+                <td>操作</td>
+            </tr>
+            {% for movie in movies.items %}
+            <tr>
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.length }}</td>
+                <td>{{ movie.tag.name }}</td>
+                <td>{{ movie.area }}</td>
+                <td>
+                    <a class="btn btn-sm btn-success" href="{{ url_for('movie.edit',id=movie.id) }}" role="button">编辑</a>
+                    <a class="btn btn-sm btn-danger" href="{{ url_for('movie.delete',id=movie.id) }}" role="button">删除</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% from 'macro_page.html' import paginate %}
+        {{ paginate('movie.list',movies) }}
+        </div>
+
+    </div>
+    </div>
+{% endblock %}
