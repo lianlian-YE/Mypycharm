@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<h1>琅琊榜单</h1>
+<ul>
+    {%  for board in boardlist %}
+        <li>
+            <a href="{{ board.id }}">{{ board.boardtitle }}</a>
+        </li>
+    {%  endfor %}
+</ul>
+</body>
+</html>
