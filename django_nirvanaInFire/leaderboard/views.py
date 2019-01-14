@@ -13,8 +13,6 @@ def index(request):
     return render(request,'leaderboard/index.html',context={'boardlist':boardlist})
 def detail(request,id):
     board = Leaderboard.objects.get(pk=id)
-    print(board)
-    print(board.pk)
     heros=board.heroinfo_set.all()
     return render(request,'leaderboard/detail.html',
                   context={
